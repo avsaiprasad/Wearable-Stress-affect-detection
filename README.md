@@ -7,12 +7,10 @@
 > Venkata Sai Prasad Aka\
 > Aditya Kondepudi
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image1.png){width="2.504166666666667in"
-height="2.504166666666667in"}
-
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image1.png)
 Submission Date: 12/09/2022
 
-**[PROBLEM SETTING:]{.underline}**
+**[PROBLEM SETTING:]**
 
 The major point that we are addressing in this project is to help users
 improve their state of health by intimating medical practitioner their
@@ -24,7 +22,7 @@ experiencing substantial psychological discomfort in previous
 estimations. Hence, in this project we are trying to reduce their mental
 stress and improving their Mental Health.
 
-**[PROBLEM DEFINITION:]{.underline}**
+**[PROBLEM DEFINITION:]}**
 
 In this project, we use WESAD which is publicly available dataset for
 Wearable Stress and Affect Detection. This multimodal dataset features
@@ -36,13 +34,13 @@ and three-axis acceleration. The goal of the project is to analyze the
 data of the population, and to predict whether the person is feeling
 stressed or not within a measuring range of five different levels.
 
-**[DATA SOURCE CITATION:]{.underline}**
+**[DATA SOURCE CITATION:]**
 
 This dataset was procured from UCI Machine Learning Repository
 
 Data Source Citation:
 
-**[DATA DESCRIPTION:]{.underline}**
+**[DATA DESCRIPTION:]**
 
 There are 63,000,000 instances and 12 attributes in the training data.
 The target variable is 'label' which is an ID of respective study
@@ -52,7 +50,7 @@ multivariate time-series with real-valued attributes. The preferred data
 operations associated with the dataset are classification and
 regression.
 
-**[DATA EXPLORATION:]{.underline}**
+**[DATA EXPLORATION:]**
 
 The data is in pickle format (.pkl) To be able to perform operations on
 the data we use the 'pickle' package to convert the data from pickle to
@@ -98,15 +96,14 @@ reading. Each label has a number code. The Labels are:
 > iii. 2 -- Amusement\
 > iv. 3 -- Meditation
 
-**[LABELS DISTRIBUTION IN THE DATA:]{.underline}**
+**[LABELS DISTRIBUTION IN THE DATA:]**
 
 Below is the data distribution of the counts of labels of the first
 member
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image4.png){width="5.415277777777778in"
-height="5.388888888888889in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image4.png)
 
-**[BALANCING UNBALANCED CHEST DATA:]{.underline}**\
+**[BALANCING UNBALANCED CHEST DATA:]**\
 The data samples from chest device are 21 times more than data wrist
 device samples causing
 
@@ -118,8 +115,7 @@ gives 4255300 samples
 Below is the distribution visualization of the unbalanced data of chest
 and wrist devices:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image5.png){width="6.5in"
-height="6.131944444444445in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image5.png)
 
 Hence, we convert all the Pickle dictionary records to Dataframe using
 Pandas by removing wrist samples. Now we only have chest device data
@@ -129,12 +125,11 @@ Once the data is converted to Dataframes we have the following columns
 for the data: "c_ax\", \"c_ay\",
 \"c_az\",\"c_ecg\",\"c_emg\",\"c_eda\",\"c_temp\",\"c_resp\",\"w_label\"
 
-**[CALCULATING INTERQUARTILE RANGE & REMOVING OUTLIERS:]{.underline}**
+**[CALCULATING INTERQUARTILE RANGE & REMOVING OUTLIERS:]**
 
 We visualize the data below, by using boxplot:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image6.png){width="5.569444444444445in"
-height="3.611111111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image6.png)
 
 In descriptive statistics, the interquartile range (IQR) is the measure
 of the spread of the middle half of the data distribution. It is measure
@@ -147,20 +142,15 @@ Percentile
 After performing IQR and removing all the outliers, the data is scaled
 down to a measurable range. The boxplot visualization is as below:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image7.png){width="5.222222222222222in"
-height="3.6527777777777777in"}
-
-**[CORRELATION MATRIX:]{.underline}**
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image7.png)
+**[CORRELATION MATRIX:]**
 
 Below is the correlation matrix of the data:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image8.png){width="5.736111111111111in"
-height="2.375in"}
-
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image8.png)
 **Heatmap of the data:**
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image9.png){width="5.597222222222222in"
-height="4.236111111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image9.png)
 
 **Interpretations:** From the above correlation matrix and heatmap of
 the data, the following
@@ -174,12 +164,11 @@ interpretations can be made:
 > \- c_emg and c_ecg are very poorly correlated with the rest of the
 > features.
 
-**[HISTOGRAM:]{.underline}**
+**[HISTOGRAM:]**
 
 Below are the distribution of the data:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image10.png){width="6.5in"
-height="4.661111111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image10.png)
 
 **Interpretations:**
 
@@ -196,7 +185,7 @@ We observe that
 >
 > \- c_emg shows a uniform distribution graph
 
-[DIMENSION REDUCTION AND VARIABLE SELECTION]{.underline}
+[DIMENSION REDUCTION AND VARIABLE SELECTION]
 
 NORMALIZATION
 
@@ -216,8 +205,7 @@ deviation, the normalized values will be closer to 0.
 
 After normalizing the data, the header rows is as follows:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image11.png){width="6.5in"
-height="3.1805555555555554in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image11.png)
 
 PRINCIPAL COMPONENT ANALYSIS (PCA)
 
@@ -233,10 +221,9 @@ dimensions than the initial data.
 After applying Principal Component Analysis to the dataset, the variance
 of the predictor variables is obtained as follows:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image12.png){width="5.652777777777778in"
-height="1.7083333333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image12.png)
 
-[DATA MINING MODELS / METHODS]{.underline}
+[DATA MINING MODELS / METHODS]
 
 LOGISTIC REGRESSION
 
@@ -332,20 +319,17 @@ numerous trees to combine their outputs.
 > interpretability and fails to determine the significance of each
 > variable.
 
-[MODEL PERFORMANCE EVALUATION & VISUALIZATIONS]{.underline}
+[MODEL PERFORMANCE EVALUATION & VISUALIZATIONS]
 
 CONFUSION MATRIX:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image13.png){width="6.5in"
-height="4.980555555555555in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image13.png)
 
 CLASSIFICATION SUMMARY REPORT:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image14.png){width="5.294444444444444in"
-height="3.3583333333333334in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image14.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image15.png){width="6.5in"
-height="4.834722222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image15.png)
 
 **ROC Curve:**
 
@@ -366,8 +350,7 @@ therefore defined as follows:
 
 **False Positive Rate** (**FPR**) is defined as follows:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image16.png){width="6.5in"
-height="4.736111111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image16.png)
 
 Interpretations:
 
@@ -392,21 +375,16 @@ Principal Components,
 
 the following is the Confusion Matrix:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image17.png){width="6.5in"
-height="4.720833333333333in"}
-
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image17.png)
 CLASSIFICATION SUMMARY REPORT:
 
-> ![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image18.png){width="5.311111111111111in"
-> height="3.3652777777777776in"}
+> ![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image18.png)
 >
-> ![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image19.png){width="6.5in"
-> height="4.697222222222222in"}
+> ![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image19.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image20.png){width="6.5in"
-height="4.655555555555556in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image20.png)
 
 Interpretations:
 
@@ -426,19 +404,15 @@ From the above we observe that:
 
 LOGISTIC REGRESSION WITH PCA WITH TWO PRINCIPAL COMPONENTS
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image21.png){width="6.5in"
-height="4.8180555555555555in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image21.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image22.png){width="4.530555555555556in"
-height="2.9249989063867017in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image22.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image23.png){width="5.726388888888889in"
-height="4.144443350831146in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image23.png)
 
 ROC CURVE:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image24.png){width="5.861111111111111in"
-height="4.262498906386702in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image24.png)
 
 Interpretations:
 
@@ -458,19 +432,15 @@ From the above we observe that:
 
 KNN Model for K = 3
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image25.png){width="6.5in"
-height="3.779165573053368in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image25.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image26.png){width="6.5in"
-height="4.145833333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image26.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image27.png){width="5.379166666666666in"
-height="3.852777777777778in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image27.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image28.png){width="5.563888888888889in"
-height="4.034722222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image28.png)
 
 Interpretations:
 
@@ -488,19 +458,15 @@ From the above we observe that:
 
 KNN for K = 5
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image29.png){width="6.5in"
-height="3.7375in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image29.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image30.png){width="6.5in"
-height="4.1875in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image30.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image31.png){width="6.063888888888889in"
-height="4.305555555555555in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image31.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image32.png){width="5.840277777777778in"
-height="4.212498906386702in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image32.png)
 
 Interpretations:
 
@@ -515,19 +481,15 @@ From the above we observe that:
 
 KNN for K = 11
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image33.png){width="6.5in"
-height="3.754166666666667in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image33.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image34.png){width="6.5in"
-height="4.123610017497813in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image34.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image35.png){width="5.611111111111111in"
-height="4.004166666666666in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image35.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image36.png){width="5.595833333333333in"
-height="4.065277777777778in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image36.png)
 
 Interpretations:
 
@@ -544,19 +506,15 @@ From the above we observe that:
 
 KNN for K = 21
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image37.png){width="6.5in"
-height="3.7222222222222223in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image37.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image38.png){width="6.5in"
-height="4.147222222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image38.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image39.png){width="5.405555555555556in"
-height="3.8583333333333334in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image39.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image40.png){width="6.091666666666667in"
-height="4.423611111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image40.png)
 
 Interpretations:
 
@@ -572,19 +530,15 @@ From the above we observe that:
 
 KNN for K = 51
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image41.png){width="6.5in"
-height="3.745833333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image41.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image42.png){width="6.5in"
-height="4.222222222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image42.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image43.png){width="5.848611111111111in"
-height="4.159722222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image43.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image44.png){width="5.554166666666666in"
-height="4.012498906386702in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image44.png)
 
 Interpretations:
 
@@ -599,19 +553,15 @@ From the above we observe that:
 
 KNN for K = 100
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image45.png){width="6.613888888888889in"
-height="3.7875in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image45.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image46.png){width="5.9625in"
-height="3.8833333333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image46.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image47.png){width="6.5in"
-height="4.638888888888889in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image47.png)
 
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image48.png){width="6.5in"
-height="4.7375in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image48.png)
 
 Interpretations:
 
@@ -634,8 +584,7 @@ From the above we observe that:
 
 FINDING THE RIGHT K VALUE
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image49.png){width="6.5in"
-height="4.051388888888889in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image49.png)
 
 As depicted from the graph, the error rate between k=3 & 5 values is the
 lowest, and the difference in error rate increases as k value is
@@ -643,19 +592,14 @@ increased.
 
 RANDOM FOREST
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image50.png){width="5.608333333333333in"
-height="3.2041666666666666in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image50.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image51.png){width="6.5in"
-height="4.25in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image51.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image52.png){width="5.9625in"
-height="4.2625in"}
-
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image52.png)
 ROC Curve:
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image53.png){width="6.5in"
-height="4.697222222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image53.png)
 
 Interpretations:
 
@@ -674,19 +618,15 @@ From the above we observe that:
 
 RANDOM FOREST ON PCA
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image54.png){width="6.5in"
-height="3.7375in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image54.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image55.png){width="6.5in"
-height="4.720833333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image55.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image56.png){width="6.147222222222222in"
-height="4.044444444444444in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image56.png)
 
 ROC Curve :
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image57.png){width="6.027777777777778in"
-height="4.347222222222222in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image57.png)
 
 Interpretations:
 
@@ -704,11 +644,9 @@ From the above we observe that:
 
 [F1 SCORE ACROSS ALL CATEGORIES:]{.underline}
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image58.png){width="6.5in"
-height="4.720833333333333in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image58.png)
 
-![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image59.png){width="6.5in"
-height="5.411111111111111in"}
+![](vertopal_b42aaabc47bd4725b56b8995f2902cc0/media/image59.png)
 
 MODEL IMPLEMENTATION INTERPRETATION:
 
